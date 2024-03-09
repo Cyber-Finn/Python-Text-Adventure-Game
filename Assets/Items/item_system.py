@@ -15,3 +15,5 @@ class StackableItem(Item):
         self.stack_count = 1
 
     
+# need methods for now actually adding specific items and calling the inventory_system
+# likely going to do this based on the "type" of item

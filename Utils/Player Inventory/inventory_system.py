@@ -14,7 +14,7 @@ def add_to_inventory(item):
         else:
             print(f"You already have {item} in your inventory.") # todo: need to be able to stack items
     else:
-         print(too_heavy_message)
+        print(too_heavy_message)
 
 # Function to remove an item from the inventory. Returns true if removed, false if not removed (Item didnt exist)
 def remove_from_inventory(item_name):
@@ -38,7 +38,7 @@ def add_to_stack(self):
                 print(f"Your {self.name} stack is already full.")
                 #should probably just create a new stack in this case -> todo: revisit later
         else:
-             print(too_heavy_message)
+            print(too_heavy_message)
 
 def remove_from_stack(self):
         if self.stack_count > 0:
@@ -55,5 +55,5 @@ def not_overweight():
         if item.stack_count > 1: #if we have a stack (remember that there are 2 item types)
             total_weight += sum(item.weight * sum(item.stack_count-1)) #-1 here, because we've already taken 1 item into account in the line above this IF
     if total_weight >= max_weight:
-         return False # they are overweight
+        return False # they are overweight
     return True # they are fine to carry more
