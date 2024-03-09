@@ -1,0 +1,11 @@
+from Scenes.Dungeon import dungeon_intro
+
+# Add more scenes and choices as needed
+
+if __name__ == "__main__":
+    # Initialize the game
+    print("Welcome to the Adventure Game!")
+    print("...")
+    player_name = input("Enter your name: ")
+    print(f"Good luck, {player_name}!")
+    dungeon_intro.dungeon_intro_scene()
