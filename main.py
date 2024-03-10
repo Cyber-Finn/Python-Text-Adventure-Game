@@ -1,6 +1,7 @@
-from Scenes.Dungeon import dungeon_intro
+from Scenes.Dungeon.Scene_one import dungeon_intro
 
-# Add more scenes and choices as needed
+# We'll be adding more scenes and choices as we build onto the game,
+# but leaving as-is for now, while I build up all the scenes, quests and items, etc.
 
 if __name__ == "__main__":
     # Initialize the game

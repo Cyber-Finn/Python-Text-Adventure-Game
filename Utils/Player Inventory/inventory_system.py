@@ -12,7 +12,7 @@ def add_to_inventory(item):
             inventory.append(item)
             print(f"Added {item} to your inventory.") #print(f"") is the python equivalent of C/C++/Go's printF functions - basically just does some formatting/interpolation
         else:
-            print(f"You already have {item} in your inventory.") # todo: need to be able to stack items
+            print(f"You already have {item} in your inventory.")
     else:
         print(too_heavy_message)
 
