@@ -62,20 +62,13 @@ def hideInShadows():
         print("Invalid choice. Try again.")
         hideInShadows()
 
-def foundPendant(): # might abstract this so that all items have these kinds of descriptions, and we can just select a random one - rather than hardcoded
-    print("\nYou pick up the pendant—a delicate silver chain with a blue gemstone.")
-    print("As you examine it, a voice whispers in your mind:")
-    print("\"Seek the Oracle. Only she can guide you.\"")
-    print("You tuck the pendant into your pocket and move forward.")
-    # Call the next scene here (e.g., encounterErin())
-
 def continueHiding():
     """
     The player remains hidden.
     """
     print("\nYou stay hidden, heart still racing.")
     print("The footsteps fade away, and you decide to keep moving.")
-    # Call the next scene here
+
 
 def confrontFigure():
     """
@@ -83,15 +76,6 @@ def confrontFigure():
     """
     print("\nYou step forward, ready to face the unknown.")
     print("The figure turns—a hooded woman with piercing blue eyes.")
-    print("She introduces herself as Erina, a fellow traveler.")
-    print("\"I've been searching for answers,\" Erina says. \"Have you found anything?\"")
-    # Call the next scene here
-
-if __name__ == "__main__":
-    print("Welcome to the Adventure Game!")
-    print("As an avid traveler, you have decided to visit the Catacombs of Paris.")
-    print("However, during your exploration, you find yourself lost.")
-    print("You can choose to walk in multiple directions to find a way out.")
-    name = input("Let's start with your name: ")
-    print("Good luck, " + name + ".")
-    dungeon_intro_scene()
+    print("She introduces herself as Erin of Londor, a fellow traveler.") #can abstract this in future, into a file for different NPCs
+    print("\"I've been searching for answers,\" Erin says. \"Have you found anything?\"")
+    # todo: Call the next scene here
