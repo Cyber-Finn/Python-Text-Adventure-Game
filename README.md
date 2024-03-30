@@ -1,5 +1,5 @@
 # Text-Based Adventure Game
-A modular fantasy text-based adventure game written in python.
+A modular (you can use it to make your own custom) text-based Dungeons and Dragons (DnD) game written in Python.
 <br>
 This project is still far from being done, but the real beauty in the very simple design is that it allows anyone to create their own custom text-based game from it. 
 <br> 
