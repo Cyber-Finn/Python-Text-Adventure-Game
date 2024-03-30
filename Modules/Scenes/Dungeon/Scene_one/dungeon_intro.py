@@ -2,8 +2,8 @@
 from .Loot_controller import controller
 from ...Assets.Items.Magic.Wearables.Small import magic_pendants
 
-#The opening scene 
-def dungeon_intro_scene():    
+#The opening/entry scene 
+def dungeon_intro_scene():
     print("\nYou find yourself standing at the entrance of a narrow, damp tunnel.")
     print("The flickering torches on the walls cast eerie shadows around you.")
     print("Your heart races as you step forward, uncertain of what lies ahead.")
@@ -53,8 +53,7 @@ def hideInShadows():
     choice = input("Enter 1 or 2: ")
 
     if choice == "1":
-        #foundPendant()
-        item = controller.get_random_item()
+        item = controller.get_random_item_pendant(controller.loot_table_pendants) # here, we specifically want only a pendant (this method gives us more control over the types of items the player will get at this point)
         print(f"{magic_pendants.get_interaction_description(item)}") # this lets us make the game more modular by having us randomly get items and the "interaction descriptions", instead of having it all hardcoded!
     elif choice == "2":
         continueHiding()
@@ -62,18 +61,13 @@ def hideInShadows():
         print("Invalid choice. Try again.")
         hideInShadows()
 
+# The player remains hidden.
 def continueHiding():
-    """
-    The player remains hidden.
-    """
     print("\nYou stay hidden, heart still racing.")
     print("The footsteps fade away, and you decide to keep moving.")
 
-
+# The player confronts the approaching figure.
 def confrontFigure():
-    """
-    The player confronts the approaching figure.
-    """
     print("\nYou step forward, ready to face the unknown.")
     print("The figure turns—a hooded woman with piercing blue eyes.")
     print("She introduces herself as Erin of Londor, a fellow traveler.") #can abstract this in future, into a file for different NPCs
