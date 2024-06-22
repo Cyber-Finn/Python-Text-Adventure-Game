@@ -1,3 +1,5 @@
+#from ...Scenes.Assets.Items import item_system
+
 # Initialize the player's inventory
 inventory = []
 # Initialize the player's max weight (will make this change based on player details)
@@ -10,9 +12,9 @@ def add_to_inventory(item):
     if not_overweight:
         if item not in inventory:
             inventory.append(item)
-            print(f"Added {item} to your inventory.") #print(f"") is the python equivalent of C/C++/Go's printF functions - basically just does some formatting/interpolation
+            print(f"[Added {item.name} to your inventory]")
         else:
-            print(f"You already have {item} in your inventory.")
+            print(f"[You already have {item.name} in your inventory]")
     else:
         print(too_heavy_message)
 
@@ -21,10 +23,10 @@ def remove_from_inventory(item_name):
     for item in inventory:
         if item.name.lower() == item_name.lower():
             inventory.remove(item)
-            print(f"Removed {item.name} from your inventory.")
+            print(f"[Removed {item.name} from your inventory]")
             return True
 
-    print(f"{item_name} not found in your inventory.")
+    print(f"[{item_name} not found in your inventory]")
     return False
 
 
@@ -33,7 +35,7 @@ def add_to_stack(self):
         if not_overweight:
             if self.stack_count < self.max_stack_size:
                 self.stack_count += 1
-                print(f"Added {self.name} to your stack (total items: {self.stack_count}).")
+                print(f"[Added {self.name} to your stack (total items: {self.stack_count})]")
             else:
                 print(f"Your {self.name} stack is already full.")
                 #should probably just create a new stack in this case -> todo: revisit later
@@ -43,9 +45,9 @@ def add_to_stack(self):
 def remove_from_stack(self):
         if self.stack_count > 0:
             self.stack_count -= 1
-            print(f"Removed {self.name} from your stack (remaining: {self.stack_count}).")
+            print(f"[Removed {self.name} from your stack (remaining: {self.stack_count})]")
         else:
-            print(f"Your {self.name} stack is empty.")
+            print(f"[Your {self.name} stack is empty]")
 # end of methods for adding stackable items to inventory 
             
 def not_overweight():
@@ -57,3 +59,14 @@ def not_overweight():
     if total_weight >= max_weight:
         return False # they are overweight
     return True # they are fine to carry more
+
+def list_inventory_items():
+    if len(inventory) > 0:
+        for item in inventory:
+            if hasattr(item, 'stack_count'):
+                print(f"[Item: {item.name}. Number of items in stack: {item.stack_count}]")
+            else:
+                print(f"[Item: {item.name}]")
+    else:
+        print("[You do not have items in your inventory]")
+        

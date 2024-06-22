@@ -1,3 +1,6 @@
+# These are just objects that define what the item types are,
+# We have methods for handling the inventory in the: inventory_system .py file within Modules.Utils.Player_Inventory
+
 # items that dont stack -> like swords, heavy objects
 class Item:
     def __init__(self, type, name, description, interaction_description, weight):
@@ -13,7 +16,3 @@ class StackableItem(Item):
         super().__init__(type, name, description, interaction_description, weight)
         self.max_stack_size = max_stack_size
         self.stack_count = 1
-
-    
-# need methods for now actually adding specific items and calling the inventory_system
-# likely going to do this based on the "type" of item

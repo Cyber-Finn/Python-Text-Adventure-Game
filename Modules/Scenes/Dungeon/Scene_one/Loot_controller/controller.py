@@ -4,7 +4,8 @@
 #   The actual objects are stored in their respective class/object files in the Assets/Items folders.
 
 import random
-from Modules.Scenes.Assets.Items.Magic.Wearables.Small  import magic_pendants  
+from Modules.Scenes.Assets.Items.Magic.Wearables.Small  import magic_pendants 
+from ....Assets.Items import item_system 
 
 # Define our loot table with (item, weight) pairs
 loot_table_pendants = [
@@ -35,4 +36,13 @@ def get_random_item_pendant(object_name): #this method of dynamically getting th
 
     # Select a random item from that expanded list
     selected_item = random.choice(choices)
-    return selected_item
+    return cast_object_as_item(get_object_for_cast(selected_item, 1))
+
+def get_object_for_cast(itemName, itemType):
+    itemObject = any #unsure if this will work
+    if itemType == 1:
+        itemObject = magic_pendants.get_object(itemName)
+    return itemObject
+
+def cast_object_as_item(itemObject):
+    return item_system.Item(itemObject.type, itemObject.name, itemObject.description, itemObject.interaction_description, itemObject.weight)

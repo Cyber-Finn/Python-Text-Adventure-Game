@@ -1,6 +1,7 @@
 # Imports
 from .Loot_controller import controller
 from ...Assets.Items.Magic.Wearables.Small import magic_pendants
+from ....Utils.Player_Inventory import inventory_system
 
 # The opening/entry scene 
 def dungeon_intro_scene():
@@ -57,6 +58,8 @@ def hideInShadows():
         item = controller.get_random_item_pendant(controller.loot_table_pendants) 
         # this next line makes the game more modular by dynamically/procedurally getting items and their "interaction descriptions", instead of having it all hardcoded all over the place!
         print(f"{magic_pendants.get_interaction_description(item)}") 
+        inventory_system.add_to_inventory(item)
+        #inventory_system.list_inventory_items() #just had this line to debug the add_to_inventory functionality
     elif choice == "2":
         continueHiding()
     else:
