@@ -12,10 +12,11 @@ I may convert this into a graphical game when done, but the project is still a W
 <br>
 
 ## How To run the game
-1. Have Python installed on your computer (You can install this from the Microsoft store)
-2. Open Command Prompt (CMD):
-3. Navigate to the folder that contains our "main.py" Python File’s Location:
-4. Type the following command and hit Enter:
+1. Download or clone this repository to a location on your computer
+2. Have Python installed on your computer (You can install this from the Microsoft store)
+3. Open Command Prompt (CMD)
+4. Navigate to the folder that contains our "main.py" Python File’s Location
+5. Type the following command in CMD and hit Enter:
 ``` 
 python main.py 
 ```
