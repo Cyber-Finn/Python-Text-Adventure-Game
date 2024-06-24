@@ -14,8 +14,7 @@ I may convert this into a graphical game when done, but the project is still a W
 ## How To run the game
 1. Open Command Prompt (CMD):
 2. Navigate to the folder that contains our "main.py" Python File’s Location:
-3. Type 
-```python 
+3. Type the following command and hit Enter:
+``` 
 python main.py 
 ```
-and hit Enter.
