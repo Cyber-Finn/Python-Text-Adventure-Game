@@ -4,6 +4,8 @@ import sys
 sys.path.append("C:/Users/Text_Adventure_Game") #todo: replace this with wherever your version of the project will be located
 from Modules.Scenes.Dungeon.Scene_one import dungeon_intro
 
+from Modules.Scenes.Assets.Characters.Players import player
+
 player_name = "" # global variable for the player's name (todo: Can save this to a file later and read from it when the player has saved)
 
 # We'll be adding more scenes and choices as we build onto the game,
@@ -13,6 +15,6 @@ if __name__ == "__main__":
     # Initialize the game
     print("Welcome to the Adventure Game!")
     print("...")
-    player_name = input("Enter your name: ")
-    print(f"Good luck, {player_name}!")
-    dungeon_intro.dungeon_intro_scene()
+    playerObject = player.Player("Human", input("Enter your name: "), "Paladin", "00", "40", list(), "")
+    print(f"Good luck, {playerObject.name}!")
+    dungeon_intro.dungeon_intro_scene(playerObject)
