@@ -1,5 +1,21 @@
 __init__.py in a subdirectory lets us turn that dir into a python package, letting us import modules from it!
 
-like this:
+like this in the python code:
+```python
+from scenes import intro
+```
 
-"from scenes import intro", etc.
+-----
+Todo:
+-----
+1. Add Character Stats & Attributes
+2. Add Skills (teleport, chain-attack, multicast, etc.)
+3. Add Races
+4. Add Health
+5. Add Damage
+6. Add Combat scenario
+7. Add Weapon Attributes
+8. Add NPCs [WIP]
+9. Add NPC controller (for random monster spawns, etc.) [WIP]
+10. Roll checks for events or pursuasion attempts, etc.
+11. Respawn or reload functionality

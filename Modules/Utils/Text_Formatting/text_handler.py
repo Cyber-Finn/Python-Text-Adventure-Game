@@ -15,27 +15,27 @@ def printWhiteText(message: list = []):
         print(colour.normalWhiteText + messagestring)
 
 # Blue text represents world-building or narration
-def printBlueText(message: list = []):
+def printNarrationText(message: list = []):
     for messagestring in message:
         print(colour.blueText + messagestring)
 
 # Green text represents choices that the narrator has given you
-def printGreenText(message: list = []):
+def printChoiceText(message: list = []):
     for messagestring in message:
         print(colour.greenText + messagestring)
 
 # Yellow text represents invalid choices or warnings
-def printYellowText(message: list = []):
+def printWarningText(message: list = []):
     for messagestring in message:
         print(colour.yellowText + messagestring)
 
 # Bold text represents events (like picking something up and adding it to inventory)
-def printBoldYellowText(message: list = []):
+def printGameEventText(message: list = []):
     for messagestring in message:
         print(colour.boldText + colour.yellowText + messagestring)
 
 # Cyan text represents items, inventory items or item descriptions
-def printCyanText(message: list = []):
+def printItemText(message: list = []):
     for messagestring in message:
         print(colour.cyanText + messagestring)
 

@@ -1,0 +1,1 @@
+#handles all the roll checks and provides methods for actually rolling and getting a random number between 1 and 30

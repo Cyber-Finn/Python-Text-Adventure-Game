@@ -39,7 +39,7 @@ def get_random_item_pendant(object_name): #this method of dynamically getting th
     return cast_object_as_item(get_object_for_cast(selected_item, 1))
 
 def get_object_for_cast(itemName, itemType):
-    itemObject = any #unsure if this will work
+    itemObject = any 
     if itemType == 1:
         itemObject = magic_pendants.get_object(itemName)
     return itemObject
